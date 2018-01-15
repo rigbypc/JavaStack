@@ -2,7 +2,9 @@ package stack.test;
 
 import static org.junit.Assert.*;
 
+import java.util.Iterator;
 import java.util.Stack;
+import java.util.Vector;
 
 import org.junit.Test;
 
@@ -46,6 +48,15 @@ public class TestStack {
 		
 		//Iterator just looks at elements, no pops
 		assertFalse(stack.isEmpty());
+	}
+	
+	@Test
+	public void testStackIteratorType() {
+		Stack<Integer> stack = new Stack<Integer>();
+		Iterator it = stack.iterator();
+		System.out.println("Iterator is of type " 
+				+ it.getClass().getName());
+		fail("find iterator type");
 	}
 
 }
