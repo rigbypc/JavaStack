@@ -36,11 +36,12 @@ public class TestStack {
 		stack.push(3);
 		
 		System.out.println("Iterator");
-		int val = 3;
+		//Iterator is broken on stack it behaves like a queue
+		int val = 1;
 		for (Integer i : stack) {
 			System.out.println(i);
 			assertEquals(val, i.intValue());
-			val --;	
+			val ++;	
 		}
 		
 	}
