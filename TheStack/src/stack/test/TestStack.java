@@ -45,7 +45,7 @@ public class TestStack {
 		}
 		
 		//Iterator just looks at elements, no pops
-		assertTrue(stack.isEmpty());
+		assertFalse(stack.isEmpty());
 	}
 
 }
