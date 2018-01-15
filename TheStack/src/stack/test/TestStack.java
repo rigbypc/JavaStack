@@ -26,5 +26,23 @@ public class TestStack {
 		assertTrue(stack.isEmpty());
 		
 	}
+	
+	@Test
+	//a characterization test
+	public void testStackIterator() {
+		Stack<Integer> stack = new Stack<Integer>();
+		stack.push(1);
+		stack.push(2);
+		stack.push(3);
+		
+		System.out.println("Iterator");
+		int val = 3;
+		for (Integer i : stack) {
+			System.out.println(i);
+			assertEquals(val, i.intValue());
+			val --;	
+		}
+		
+	}
 
 }
