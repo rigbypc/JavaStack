@@ -39,15 +39,15 @@ public class TestStackProper {
 		
 		System.out.println("Iterator");
 		//Iterator is broken on stack it behaves like a queue
-		int val = 1;
+		int val = 3;
 		for (Integer i : stack) {
 			System.out.println(i);
 			assertEquals(val, i.intValue());
-			val ++;	
+			val --;	
 		}
 		
 		//Iterator just looks at elements, no pops
-		assertFalse(stack.isEmpty());
+		assertTrue(stack.isEmpty());
 	}
 	
 	@Test
@@ -56,8 +56,7 @@ public class TestStackProper {
 		Iterator it = stack.iterator();
 		System.out.println("Iterator is of type " 
 				+ it.getClass().getName());
-		Vector vec = new Vector<>();
-		assertEquals(it.getClass(), vec.iterator().getClass());
+		assertEquals(it.getClass().getName(), "stack.test.IteratorStackProper");
 	}
 
 }
