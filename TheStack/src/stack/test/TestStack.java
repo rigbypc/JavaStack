@@ -56,7 +56,8 @@ public class TestStack {
 		Iterator it = stack.iterator();
 		System.out.println("Iterator is of type " 
 				+ it.getClass().getName());
-		fail("find iterator type");
+		Vector vec = new Vector<>();
+		assertEquals(it.getClass(), vec.iterator().getClass());
 	}
 
 }
