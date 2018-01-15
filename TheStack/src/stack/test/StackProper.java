@@ -7,8 +7,7 @@ public class StackProper<E> extends Stack<E> {
 
 	@Override
 	public synchronized Iterator<E> iterator() {
-		// TODO Auto-generated method stub
-		return super.iterator();
+		return new IteratorStackProper<>(this);
 	}
 
 }
