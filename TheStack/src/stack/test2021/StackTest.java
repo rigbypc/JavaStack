@@ -42,7 +42,7 @@ public class StackTest
             assertEquals(expected, actual);  
             expected --;
         }
-
+        
         assertTrue(stack.isEmpty());
 
         //LIFO
