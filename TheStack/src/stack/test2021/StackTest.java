@@ -37,18 +37,18 @@ public class StackTest
         stack.push(2);
         stack.push(3);
 
-        Integer expected = 1;
+        Integer expected = 3;
         for (Integer actual : stack) {
             assertEquals(expected, actual);  
-            expected ++;
+            expected --;
         }
 
-        assertTrue(!stack.isEmpty());
+        assertTrue(stack.isEmpty());
 
-        //FIFO
-        Vector<Integer> v = new Vector<Integer>();
+        //LIFO
+        StackProper<Integer> sp = new StackProper<Integer>();
 
-        assertEquals(v.iterator().getClass(), stack.iterator().getClass());
+        assertEquals(sp.iterator().getClass(), stack.iterator().getClass());
     }
 
     
