@@ -12,14 +12,12 @@ public class IteratorStackProper<E> implements Iterator<E> {
 
     @Override
     public boolean hasNext() {
-        // TODO Auto-generated method stub
-        return false;
+    	return !stack.isEmpty();
     }
 
     @Override
     public E next() {
-        // TODO Auto-generated method stub
-        return null;
+        return stack.pop();
     }
     
 }
